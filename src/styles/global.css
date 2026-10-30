@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+    font-family: 'DM Sans', sans-serif;
+    color: #f1f5f9;
+    background: #0f172a;
+    font-synthesis: none;
+    --lime: #a3e635;
+    --muted: #9aa8bb
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 50% -20%, #26384f, #0f172a 55%)
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 3px
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 19px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--lime);
+    color: #17220d;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer
+}
+
+.button:hover {
+    background: #b9f36c
+}
+
+.eyebrow {
+    color: #b7e879;
+    font-size: 10px;
+    letter-spacing: .16em;
+    font-weight: 800
+}
+
+.catalog {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 55px 24px
+}
+
+.catalog h1,
+.catalog h2 {
+    font-family: Manrope
+}
+
+.catalog h1 {
+    font-size: 38px
+}
+
+.muted,
+.catalog>p {
+    color: var(--muted)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px
+}
+
+.message {
+    text-align: center;
+    padding: 40px;
+    color: #b9c5d5
+}
+
+.error {
+    color: #fca5a5
+}
+
+.empty {
+    text-align: center;
+    padding: 70px 20px;
+    color: #aab6c8
+}
+
+.empty h1 {
+    font-size: 80px;
+    color: var(--lime)
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media(max-width:650px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:430px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+}
